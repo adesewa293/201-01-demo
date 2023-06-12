@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=touch, initial-scale=1.0">
+  <style>
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+   h1 {
+    background-color:blueviolet;
+    text-align: center;
+    width: 100%;
+    padding: 40px;
+    color: black;
+   }
+  </style>
+  <title>Class 1 lab</title>
+</head>
+<body>
+  <header>
+
+  </header>
+  <main>
+    <h1>Class 1 Lab</h1>
+  </main>
+   <p style="color: aqua; font-size: 25px; background-color: black;">Do you want to play a guessing game?</p>
+   <p style="color: brown; font-size: 25px; background-color: goldenrod;">How many pets do you think i own?</p>
+   <p style="color: burlywood; font-size: 25px; background-color: tomato;">How many days do I code in a week?</p>
+   <p style="color: paleturquoise; font-size: 25px; background-color: plum;">If you could pick a lucky number between 0 and 9, what would it be?</p>
+  <script>
+    let user;
+    let petNum;
+    let myLuckyNumber;
+    let myCodingDays;
+    let gamePrompt;
+
+    alert ("Hi, I'm Adesewa, welcome to my site");
+    function userName() {
+        user = prompt('what is your name?')
+        alert('welcome to my page ' + user + '!')
+        gamePrompt = prompt("do you want to play a guessing game?")
+        // console.log(user);
+        if (gamePrompt === 'yes'){alert ('Okay then, let us play '+ user)
+      } else alert('You have to seee my prompts. lets play pleaseeeeeeee *inserts cute eyes*')
+    }
+    userName();
+
+    function numOfPets() {
+        petNum = prompt('How many pets do you think i own ' + user + '?')
+        petNum = parseInt(petNum);
+      // console.log(petNum);
+      // console.log(typeof petNum);
+
+      if (petNum > 0) {
+        alert("uh oh, that is what i wish i have, i actually have zero")
+      } else if (petNum === 0) {
+        alert("that is correct, you do know me!")
+      }
+    } 
+     numOfPets();
+    
+    function luckyNumber(){
+      myLuckyNumber = prompt('if you could pick a lucky number between 0 and 9, what would it be?')
+      myLuckyNumber = parseInt(myLuckyNumber);
+      // console.log(luckyNumber);
+      // console.log(typeof luckyNumber);
+      if (myLuckyNumber === 7){
+        alert('mine too!')
+      }else {
+          alert ('lucky numbers are unique to eaach person, mine is 7 tho')
+        }
+      }
+    
+    luckyNumber(); 
+
+    function codingDays(){
+      myCodingDays = prompt('How many days do i code in a week?')
+      myCodingDays = parseInt(myCodingDays);
+      // console.log(codingDays);
+      // console.log(typeof codingDays);
+      if (myCodingDays === 7){
+        alert('you must know me so well, talk is cheap, just show me the code.')
+      } else {
+        alert ('I wish. I actually do code everyday.')
+      }
+    } 
+      codingDays();
+    alert ('It is so nice to meet you ' + user  + ' now you know that i have zero pets, my lucky number is 7 and yours is '+ myLuckyNumber + ' and i code 7 days a week, i will assume you code '+ myCodingDays + ' days a week too!' )
+    
+  </script>
+  <footer></footer>
+</body>
+</html>
